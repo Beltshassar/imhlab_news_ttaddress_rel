@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-09-05T11:10:30Z" product-name="news_ttaddress_rel">
+        <header/>
+        <body>
+            <trans-unit id="news.ttaddres_rel_tab">
+                <source>News relations</source>
+            </trans-unit>
+
+            <trans-unit id="tt_address.news_rel_tab">
+                <source>Author relations</source>
+            </trans-unit>
+            <trans-unit id="tt_address.news">
+                <source>Author</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
