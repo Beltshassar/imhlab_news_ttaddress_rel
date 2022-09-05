@@ -18,6 +18,6 @@ defined('TYPO3_MODE') or die();
          * Add page TsConfig
          */
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news_ttaddress_rel/Configuration/TsConfig/Page/TCEFORM.tsconfig">'
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news-ttaddress-rel/Configuration/TsConfig/Page/TCEFORM.tsconfig">'
         );
 })();
