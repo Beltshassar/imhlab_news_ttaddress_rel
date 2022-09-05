@@ -12,7 +12,7 @@ defined('TYPO3_MODE') or die();
         /**
          * Extend ext:tt-address
          */
-        $GLOBALS['TYPO3_CONF_VARS']['EXT']['tt_adress']['classes']['Domain/Model/Address'][] = 'news-ttaddress-rel';
+        $GLOBALS['TYPO3_CONF_VARS']['EXT']['tt_address']['classes']['Domain/Model/Address'][] = 'news-ttaddress-rel';
 
         /**
          * Add page TsConfig
