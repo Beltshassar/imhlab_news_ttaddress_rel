@@ -11,7 +11,7 @@ $tmp_ttaddress_rel_columns = [
             'type' => 'select',
             'renderType' => 'selectMultipleSideBySide',
             'foreign_table' => 'tt_address',
-            'foreign_table_where' => ' AND ( ###PAGE_TSCONFIG_STR### = \'FALSE\' OR tt_address.pid = ###PAGE_TSCONFIG_STR### ) AND tt_address.deleted = 0 AND tt_address.hidden = 0 AND tt_address.sys_language_uid = ###REC_FIELD_sys_language_uid### ORDER BY tt_address.firstname ASC, tt_address.lastname ASC',
+            'foreign_table_where' => ' AND ( ###PAGE_TSCONFIG_STR### = \'FALSE\' OR tt_address.pid = ###PAGE_TSCONFIG_STR### ) AND tt_address.deleted = 0 AND tt_address.hidden = 0 AND tt_address.sys_language_uid = ###REC_FIELD_sys_language_uid### ORDER BY tt_address.first_name ASC, tt_address.last_name ASC',
             'MM' => 'tx_imhlabnewsttaddressrel_news_ttaddress_mm',
             'size' => 10,
             'autoSizeMax' => 30,
