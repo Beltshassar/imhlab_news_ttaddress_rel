@@ -5,7 +5,7 @@ defined('TYPO3_MODE') or die();
 $tmp_ttaddress_rel_columns = [
 
     'ttaddress_rel' => [
-        'exclude' => 1,
+        'exclude' => true,
         'label' => 'LLL:EXT:news/Resources/Private/Language/locallang_csh_news.xlf:author.description',
         'config' => [
             'type' => 'select',

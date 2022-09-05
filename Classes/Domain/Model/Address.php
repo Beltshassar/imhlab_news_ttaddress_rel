@@ -41,6 +41,29 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     protected $news;
 
     /**
+     * __construct
+     */
+    public function __construct()
+    {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+        parent::__construct();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->news = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
      * Adds a News
      *
      * @param \IMHLab\NewsTtaddressRel\Domain\Model\News $news
