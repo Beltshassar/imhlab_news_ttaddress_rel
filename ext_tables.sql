@@ -1,11 +1,11 @@
 #
 # Table structure for table 'tx_news_domain_model_news'
 #
-CREATE TABLE tx_news_domain_model_news (
+-- CREATE TABLE tx_news_domain_model_news (
 
-    ttaddress_rel int(11) unsigned DEFAULT '0',
+--     ttaddress_rel int(11) unsigned DEFAULT '0',
 
-);
+-- );
 
 #
 # Table structure for table 'tt_address'
