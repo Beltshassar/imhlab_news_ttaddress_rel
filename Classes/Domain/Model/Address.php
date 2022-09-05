@@ -46,8 +46,8 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     public function __construct()
     {
         //Do not remove the next line: It would break the functionality
-        $this->initStorageObjects();
         parent::__construct();
+        $this->initStorageObjects();
     }
 
     /**
