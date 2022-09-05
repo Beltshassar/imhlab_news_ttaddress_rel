@@ -13,4 +13,11 @@ defined('TYPO3_MODE') or die();
          * Extend ext:tt-address
          */
         $GLOBALS['TYPO3_CONF_VARS']['EXT']['tt_adress']['classes']['Domain/Model/Address'][] = 'news-ttaddress-rel';
+
+        /**
+         * Add page TsConfig
+         */
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news_ttaddress_rel/Configuration/TsConfig/Page/TCEFORM.tsconfig">'
+        );
 })();
