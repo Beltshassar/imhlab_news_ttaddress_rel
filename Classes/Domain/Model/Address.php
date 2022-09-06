@@ -28,10 +28,6 @@ namespace IMHLab\NewsTtaddressRel\Domain\Model;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use \TYPO3\CMS\Extbase\Persistence\ObjectStorage as ObjectStorage;
-use \TYPO3\CMS\Extbase\Annotation\ORM\Lazy as Lazy;
-use \IMHLab\NewsTtaddressRel\Domain\Model\News as News;
-
 /**
  * Address
  */
@@ -40,8 +36,8 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     /**
      * news
      *
-     * @var ObjectStorage<News>
-     * @Lazy
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\News>
+     * @\TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $news;
 
@@ -65,16 +61,16 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      */
     protected function initStorageObjects()
     {
-        $this->news = new ObjectStorage();
+        $this->news = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
      * Adds a News
      *
-     * @param News $news
+     * @param \IMHLab\NewsTtaddressRel\Domain\Model\News $news
      * @return void
      */
-    public function addNews(News $news)
+    public function addNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $news)
     {
         $this->news->attach($news);
     }
@@ -82,10 +78,10 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     /**
      * Removes a News
      *
-     * @param News $newsToRemove
+     * @param \IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove
      * @return void
      */
-    public function removeNews(News $newsToRemove)
+    public function removeNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove)
     {
         $this->news->detach($newsToRemove);
     }
@@ -93,7 +89,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     /**
      * Returns the news
      *
-     * @return ObjectStorage<News> $news
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\News> $news
      */
     public function getNews()
     {
@@ -103,10 +99,10 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     /**
      * Sets the news
      *
-     * @param ObjectStorage<News> $news
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\News> $news
      * @return void
      */
-    public function setNews(ObjectStorage $news)
+    public function setNews(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $news)
     {
         $this->news = $news;
     }
