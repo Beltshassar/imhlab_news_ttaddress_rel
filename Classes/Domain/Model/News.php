@@ -29,6 +29,10 @@ namespace IMHLab\NewsTtaddressRel\Domain\Model;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use \TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use \IMHLab\NewsTtaddressRel\Domain\Model\Address;
+
 /**
  * News
  */
@@ -37,18 +41,18 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * ttaddressRel
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @var ObjectStorage<Address>
+     * @Lazy
      */
-    protected $ttaddressRel = null;
+    protected $ttaddressRel;
 
     /**
      * Adds a TtaddressRel
      *
-     * @param \IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressRel
+     * @param Address $ttaddressRel
      * @return void
      */
-    public function addTtaddressRel(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressRel)
+    public function addTtaddressRel(Address $ttaddressRel)
     {
         $this->ttaddressRel->attach($ttaddressRel);
     }
@@ -56,10 +60,10 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * Removes a TtaddressRel
      *
-     * @param \IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressRelToRemove The TtaddressRel to be removed
+     * @param Address $ttaddressRelToRemove
      * @return void
      */
-    public function removeTtaddressRel(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressRelToRemove)
+    public function removeTtaddressRel(Address $ttaddressRelToRemove)
     {
         $this->ttaddressRel->detach($ttaddressRelToRemove);
     }
@@ -67,7 +71,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * Returns the ttaddressRel
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address> ttaddressRel
+     * @return ObjectStorage<Address> $ttaddressRel
      */
     public function getTtaddressRel()
     {
@@ -77,10 +81,10 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * Sets the ttaddressRel
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address> $ttaddressRel
+     * @param ObjectStorage<Address> $ttaddressRel
      * @return void
      */
-    public function setTtaddressRel(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ttaddressRel)
+    public function setTtaddressRel(ObjectStorage $ttaddressRel)
     {
         $this->ttaddressRel = $ttaddressRel;
     }
