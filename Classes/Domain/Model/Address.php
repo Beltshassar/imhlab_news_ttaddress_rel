@@ -28,8 +28,9 @@ namespace IMHLab\NewsTtaddressRel\Domain\Model;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
- use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
- use \IMHLab\NewsTtaddressRel\Domain\Model\News;
+use \TYPO3\CMS\Extbase\Persistence\ObjectStorage as ObjectStorage;
+use \TYPO3\CMS\Extbase\Annotation\ORM\Lazy as Lazy;
+use \IMHLab\NewsTtaddressRel\Domain\Model\News as News;
 
 /**
  * Address
@@ -40,7 +41,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      * news
      *
      * @var ObjectStorage<News>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @Lazy
      */
     protected $news;
 

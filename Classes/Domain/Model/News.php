@@ -29,9 +29,9 @@ namespace IMHLab\NewsTtaddressRel\Domain\Model;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-use \TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
-use \IMHLab\NewsTtaddressRel\Domain\Model\Address;
+use \TYPO3\CMS\Extbase\Persistence\ObjectStorage as ObjectStorage;
+use \TYPO3\CMS\Extbase\Annotation\ORM\Lazy as Lazy;
+use \IMHLab\NewsTtaddressRel\Domain\Model\Address as Address;
 
 /**
  * News
