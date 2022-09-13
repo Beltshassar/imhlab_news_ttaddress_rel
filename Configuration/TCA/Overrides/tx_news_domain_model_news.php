@@ -2,9 +2,9 @@
 defined('TYPO3_MODE') or die();
 
 
-$tmp_ttaddress_rel_columns = [
+$tmp_ttaddress_columns = [
 
-    'ttaddress_rel' => [
+    'ttaddress' => [
         'exclude' => true,
         'label' => 'LLL:EXT:news/Resources/Private/Language/locallang_csh_news.xlf:author.description',
         'config' => [
@@ -28,7 +28,7 @@ $tmp_ttaddress_rel_columns = [
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tx_news_domain_model_news',
-    $tmp_ttaddress_rel_columns
+    $tmp_ttaddress_columns
 );
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
