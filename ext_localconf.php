@@ -15,6 +15,15 @@ defined('TYPO3_MODE') or die();
         $GLOBALS['TYPO3_CONF_VARS']['EXT']['tt_adress']['classes']['Domain/Model/Address'][] = 'news-ttaddress-rel';
 
         /**
+         * Use of ext:extender
+         */
+        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news-ttaddress-rel'] = \Imhlab\NewsTtaddressRel\Domain\Model\Address::class;
+        
+        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news-ttaddress-rel'] = 'EXT:news-ttaddress-rel/Classes/Extending/Domain/Model/Address.php';
+        
+        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news-ttaddress-rel'] = 'Domain/Model/Address';
+
+        /**
          * Add page TsConfig
          */
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
