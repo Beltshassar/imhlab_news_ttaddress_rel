@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace IMHLab\NewsTtaddressRel\Domain\Model;
 
@@ -36,9 +37,32 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      * news
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\News>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @\TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $news;
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        //Do not remove the next line: It would break the functionality
+        parent::__construct();
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->news = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
 
     /**
      * Adds a News
@@ -54,7 +78,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     /**
      * Removes a News
      *
-     * @param \IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove The News to be removed
+     * @param \IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove
      * @return void
      */
     public function removeNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove)
