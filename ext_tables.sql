@@ -3,7 +3,6 @@
 #
 CREATE TABLE tx_news_domain_model_news (
 
-    --ttaddress_rel int(11) unsigned DEFAULT '0',
     ttaddress int(11) unsigned DEFAULT '0',
 
 );
