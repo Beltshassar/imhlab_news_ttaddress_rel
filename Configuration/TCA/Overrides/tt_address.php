@@ -13,7 +13,7 @@ $tmp_news_rel_columns = [
             'foreign_table' => 'tx_news_domain_model_news',
             'readOnly' => true,
             'MM' => 'tx_imhlabnewsttaddressrel_news_ttaddress_mm',
-            // 'MM_opposite_field' => 'ttaddress_rel',
+            'MM_opposite_field' => 'news',
             // 'foreign_table_where' => ' AND tx_news_domain_model_news.pid=###CURRENT_PID### AND tx_news_domain_model_news.sys_language_uid = ###REC_FIELD_sys_language_uid### ORDER BY tx_news_domain_model_news.datetime DESC ',
             'minitems' => 0,
             'maxitems' => 99,
