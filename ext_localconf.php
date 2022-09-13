@@ -24,7 +24,6 @@ defined('TYPO3_MODE') or die();
         //     \FriendsOfTYPO3\TtAddress\Domain\Model\Address::class
         //      ]['news-ttaddress-rel'] = 'EXT:news-ttaddress-rel/Classes/Domain/Model/Address.php';
 
-<<<<<<< HEAD
         /**
          * Use of ext:extender
          */
@@ -40,6 +39,4 @@ defined('TYPO3_MODE') or die();
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news_ttaddress_rel/Configuration/TsConfig/Page/TCEFORM.tsconfig">'
         );
-=======
->>>>>>> 6fdca8c8b6679fd6dd3807e523466985b4ddb3ca
 })();
