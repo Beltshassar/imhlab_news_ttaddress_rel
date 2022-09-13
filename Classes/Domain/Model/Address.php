@@ -39,7 +39,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\News>
      * @\TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
-    protected $news;
+    protected $news = null;
 
     /**
      * __construct
@@ -48,7 +48,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     {
         //Do not remove the next line: It would break the functionality
         parent::__construct();
-        $this->initStorageObjects();
+        $this->initializeObject();
     }
 
     /**
@@ -59,9 +59,9 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      *
      * @return void
      */
-    protected function initStorageObjects()
+    protected function initializeObject()
     {
-        $this->news = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->news = $this->news ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
