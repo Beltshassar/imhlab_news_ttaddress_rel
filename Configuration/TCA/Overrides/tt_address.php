@@ -5,7 +5,7 @@ $tmp_news_rel_columns = [
 
     'news' => [
         'exclude' => true,
-        'label' => 'LLL:EXT:news_ttaddress_rel/Resources/Private/Language/locallang_db.xlf:tt_address.news_rel',
+        'label' => 'LLL:EXT:news-ttaddress-rel/Resources/Private/Language/locallang_db.xlf:tt_address.news_rel',
         'config' => [
             'type' => 'select',
             'multiple' => 1,
@@ -35,4 +35,4 @@ TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     '--div--;News:tt_address.news_rel_tab,news'
 );
 
-// '--div--;LLL:EXT:news_ttaddress_rel/Resources/Private/Language/locallang_db.xlf:tt_address.news_rel_tab,news'
+
