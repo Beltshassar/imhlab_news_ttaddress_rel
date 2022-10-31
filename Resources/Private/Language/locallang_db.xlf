@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2022-09-05T11:10:30Z" product-name="news_ttaddress_rel">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-09-05T11:10:30Z" product-name="news-ttaddress-rel">
         <header/>
         <body>
             <trans-unit id="news.ttaddres_rel_tab">

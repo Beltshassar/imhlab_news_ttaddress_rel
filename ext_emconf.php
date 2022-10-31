@@ -1,7 +1,7 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext: "imhlab_news_ttaddress_rel"
+ * Extension Manager/Repository config file for ext: "news-ttaddress-rel"
  *
  * Inspired by md_news_author and news_author_rel
  *
