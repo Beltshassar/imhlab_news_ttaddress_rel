@@ -33,7 +33,7 @@ $tmp_ttaddress_columns = [
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tx_news_domain_model_news',
-    '--div--;Adr,ttaddress'
+    '--div--;Forfatter,ttaddress'
 );
 
 

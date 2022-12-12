@@ -32,7 +32,7 @@ $tmp_news_rel_columns = [
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tt_address',
-    '--div--;News:tt_address.news_rel_tab,news'
+    '--div--;Artikler,news'
 );
 
 
