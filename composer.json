@@ -1,7 +1,7 @@
 {
     "name": "imhlab/news-ttaddress-rel",
     "type": "typo3-cms-extension",
-    "description": "Adds one or more authors from tt_address to a tx_news record.",
+    "description": "Adds one or more authors from tt_address to a tx_news record in typo3 backend",
     "license": "GPL-2.0-or-later",
     "keywords": [
         "TYPO3", 
