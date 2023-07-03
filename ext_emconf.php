@@ -15,10 +15,10 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'dad@imh.dk',
     'state' => 'alpha',
     'clearCacheOnLoad' => 1,
-    'version' => '0.0.1',
+    'version' => '0.0.2',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.99',
+            'typo3' => '11.5.99-12.5.99',
             'news' => '9.4.0-11.1.99',
             'tt-address' => '6.1.0-6.99.99',
         ],
