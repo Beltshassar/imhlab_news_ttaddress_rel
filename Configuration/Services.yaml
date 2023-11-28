@@ -7,3 +7,9 @@ services:
   IMHLab\NewsTtaddressRel\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+  IMHLab\NewsTtaddressRel\Extending\Domain\Model\Address:
+    tags:
+      -
+        name: 'extender.extends'
+        class: FriendsOfTYPO3\TtAddress\Domain\Model\Address

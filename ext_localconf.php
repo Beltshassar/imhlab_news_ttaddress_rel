@@ -27,11 +27,11 @@ defined('TYPO3_MODE') or die();
         /**
          * Use of ext:extender
          */
-        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news_ttaddress_rel'] = \Imhlab\NewsTtaddressRel\Extending\Domain\Model\Address::class;
+        // $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news_ttaddress_rel'] = \Imhlab\NewsTtaddressRel\Extending\Domain\Model\Address::class;
         
-        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news_ttaddress_rel'] = 'EXT:news_ttaddress_rel/Classes/Extending/Domain/Model/Address.php';
+        // $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news_ttaddress_rel'] = 'EXT:news_ttaddress_rel/Classes/Extending/Domain/Model/Address.php';
         
-        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news_ttaddress_rel'] = 'Domain/Model/Address';
+        // $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tt_address']['extender'][\FriendsOfTYPO3\TtAddress\Domain\Model\Address::class]['news_ttaddress_rel'] = 'Domain/Model/Address';
 
         
 

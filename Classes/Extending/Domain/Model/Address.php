@@ -58,7 +58,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      *
      * @return void
      */
-    protected function initializeObject()
+    public function initializeObject()
     {
         $this->news = $this->news ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
