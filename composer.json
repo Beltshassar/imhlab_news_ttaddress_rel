@@ -30,7 +30,7 @@
     "require": {
         "typo3/cms-core": ">=11.4,<12.5",
         "georgringer/news": ">=9.4,<11.4.99",
-        "friendsoftypo3/tt-address": ">=6.1,<8.99",
+        "friendsoftypo3/tt-address": ">=6.1,<9.99",
         "evoweb/extender": ">=8" 
     },
     "extra": {
