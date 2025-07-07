@@ -59,7 +59,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      *
      * @return void
      */
-    public function initializeObject()
+    public function initializeObject(): void
     {
         $this->news = $this->news ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
@@ -70,7 +70,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      * @param \IMHLab\NewsTtaddressRel\Domain\Model\News $news
      * @return void
      */
-    public function addNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $news)
+    public function addNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $news): void
     {
         $this->news->attach($news);
     }
@@ -81,7 +81,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      * @param \IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove
      * @return void
      */
-    public function removeNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove)
+    public function removeNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove): void
     {
         $this->news->detach($newsToRemove);
     }
@@ -102,7 +102,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\News> $news
      * @return void
      */
-    public function setNews(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $news)
+    public function setNews(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $news): void
     {
         $this->news = $news;
     }

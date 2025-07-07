@@ -1,0 +1,70 @@
+<?php
+
+declare(strict_types=1);
+
+namespace IMHLab\NewsTtaddressRel\Extending\Domain\Model;
+
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+
+/**
+ * Address
+ */
+class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
+{
+    /**
+     * News
+     *
+     * @var ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\News>
+     */
+    #[\TYPO3\CMS\Extbase\Annotation\ORM\Lazy]
+    protected ObjectStorage $news;
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->initializeObject();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     */
+    public function initializeObject(): void
+    {
+        $this->news ??= new ObjectStorage();
+    }
+
+    /**
+     * Adds a News
+     */
+    public function addNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $news): void
+    {
+        $this->news->attach($news);
+    }
+
+    /**
+     * Removes a News
+     */
+    public function removeNews(\IMHLab\NewsTtaddressRel\Domain\Model\News $newsToRemove): void
+    {
+        $this->news->detach($newsToRemove);
+    }
+
+    /**
+     * Returns the news
+     */
+    public function getNews(): ObjectStorage
+    {
+        return $this->news;
+    }
+
+    /**
+     * Sets the news
+     */
+    public function setNews(ObjectStorage $news): void
+    {
+        $this->news = $news;
+    }
+}
