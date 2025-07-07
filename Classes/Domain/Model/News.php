@@ -73,7 +73,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
      * @param \IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddress
      * @return void
      */
-    public function addTtaddressRel(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddress)
+    public function addTtaddressRel(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddress): void
     {
         $this->ttaddress->attach($ttaddress);
     }
@@ -84,7 +84,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
      * @param \IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressToRemove
      * @return void
      */
-    public function removeTtaddress(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressToRemove)
+    public function removeTtaddress(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressToRemove): void
     {
         $this->ttaddress->detach($ttaddressToRemove);
     }
@@ -105,7 +105,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address> $ttaddressRel
      * @return void
      */
-    public function setTtaddress(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ttaddress)
+    public function setTtaddress(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ttaddress): void
     {
         $this->ttaddress = $ttaddress;
     }

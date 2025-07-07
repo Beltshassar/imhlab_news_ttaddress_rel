@@ -14,11 +14,10 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Martin Kristensen and Daniel Alexander Damm',
     'author_email' => 'dad@imh.dk',
     'state' => 'alpha',
-    'clearCacheOnLoad' => 1,
     'version' => '0.0.2',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.99-12.5.99',
+            'typo3' => '12.4.0-13.4.99',
             'news' => '9.4.0-11.4.99',
             'tt-address' => '6.1.0-6.99.99',
         ],
