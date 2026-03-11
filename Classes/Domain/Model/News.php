@@ -3,9 +3,13 @@ declare(strict_types=1);
 
 namespace IMHLab\NewsTtaddressRel\Domain\Model;
 
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+
 /***************************************************************
  *
  *  Copyright notice
+ * 
+ *  https://chatgpt.com/c/69b1708b-ca7c-8331-9715-0ffad045b99a
  *
  *  (c) 2016 Christoph Daecke <typo3@mediadreams.org>
  *  (c) 2022 IMHlab <dad@imh.dk>
@@ -37,41 +41,23 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * ttaddress
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address>
-     * @\TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @var ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
-    protected $ttaddress = null;
+    protected ?ObjectStorage $ttaddress = null;
 
     /**
      * __construct
      */
     public function __construct()
     {
-        //Do not remove the next line: It would break the functionality
         parent::__construct();
-        $this->initializeObject();
-    }
 
-    /**
-     * Initializes all ObjectStorage properties
-     * Do not modify this method!
-     * It will be rewritten on each save in the extension builder
-     * You may modify the constructor of this class instead
-     *
-     * @return void
-     */
-    protected function initializeObject()
-    {
-        $this->contact = $this->contact ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->ttaddress = new ObjectStorage();
     }
-    
-
 
     /**
      * Adds a Ttaddress
-     *
-     * @param \IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddress
-     * @return void
      */
     public function addTtaddressRel(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddress): void
     {
@@ -80,9 +66,6 @@ class News extends \GeorgRinger\News\Domain\Model\News
 
     /**
      * Removes a Ttaddress
-     *
-     * @param \IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressToRemove
-     * @return void
      */
     public function removeTtaddress(\IMHLab\NewsTtaddressRel\Domain\Model\Address $ttaddressToRemove): void
     {
@@ -91,21 +74,16 @@ class News extends \GeorgRinger\News\Domain\Model\News
 
     /**
      * Returns the ttaddress
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address> $ttaddressRel
      */
-    public function getTtaddress()
+    public function getTtaddress(): ?ObjectStorage
     {
         return $this->ttaddress;
     }
 
     /**
      * Sets the ttaddress
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\IMHLab\NewsTtaddressRel\Domain\Model\Address> $ttaddressRel
-     * @return void
      */
-    public function setTtaddress(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ttaddress): void
+    public function setTtaddress(ObjectStorage $ttaddress): void
     {
         $this->ttaddress = $ttaddress;
     }
